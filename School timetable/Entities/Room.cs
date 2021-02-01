@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace School_timetable
 {
-	public class Room
+	class Room
 	{
 		private int _roomID;
 
@@ -22,7 +22,7 @@ namespace School_timetable
 
 		public Room()
 		{
-			Timetable = new List<Timetable>;
+			Timetable = new List<Timetable>();
 		}
 	}
 }

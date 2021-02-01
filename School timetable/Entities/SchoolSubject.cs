@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace School_timetable
 {
-	public class SchoolSubject
+	class SchoolSubject
 	{
 		private int _subjectID;
 		private string _name;

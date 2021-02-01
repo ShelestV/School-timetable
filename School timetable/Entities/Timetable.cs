@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace School_timetable
 {
-	public enum Weeks
+	enum Weeks
 	{ 
 		FIRST = 1,
 		SECOND = 2
 	}
 
-	public class Timetable
+	class Timetable
 	{
 		private Weeks _indexWeek;
 		private Days _dayOfWeek;
