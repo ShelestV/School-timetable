@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace School_timetable
 {
-	public class Time
+	class Time
 	{
 		private int _hour;
 		private int _minute;

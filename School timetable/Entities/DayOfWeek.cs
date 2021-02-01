@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace School_timetable
 {
-	public enum Days
+	enum Days
 	{ 
 		Monday = 1,
 		Tuesday = 2,
@@ -15,8 +15,8 @@ namespace School_timetable
 		Thursday = 4,
 		Friday = 5
 	}
-
-	public class DayOfWeek
+	
+	class DayOfWeek
 	{
 		private Days _day;
 
