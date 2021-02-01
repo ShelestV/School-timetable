@@ -33,12 +33,5 @@ namespace School_timetable
 			Subjects = new List<SchoolSubject>();
 			Timetable = new List<Timetable>();
 		}
-
-		public Teacher(string name)
-		{
-			_fio = name;
-			Subjects = new List<SchoolSubject>();
-			Timetable = new List<Timetable>();
-		}
 	}
 }

@@ -89,17 +89,5 @@ namespace School_timetable
 		public virtual Teacher Teacher { get; set; }
 		public virtual SchoolSubject Subject { get; set; }
 		public virtual SchoolClass Class { get; set; }
-
-		public Timetable()
-		{
-			//private Weeks _indexWeek;
-			//private Days _dayOfWeek;
-			//private int _roomID;
-			//private int _lessonID;
-			//private int _teacherID;
-			//private int _studyYear;
-			//private char _letterClass;
-			//private int _subjectID;
-		}
 	}
 }

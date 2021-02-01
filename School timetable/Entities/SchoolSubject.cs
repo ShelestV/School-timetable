@@ -34,13 +34,5 @@ namespace School_timetable
 			ClassYears = new List<StudyPlan>();
 			Timetable = new List<Timetable>();
 		}
-
-		public SchoolSubject(string name)
-		{
-			_name = name;
-			Teachers = new List<Teacher>();
-			ClassYears = new List<StudyPlan>();
-			Timetable = new List<Timetable>();
-		}
 	}
 }

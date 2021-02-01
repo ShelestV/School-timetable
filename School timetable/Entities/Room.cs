@@ -19,5 +19,10 @@ namespace School_timetable
 		}
 
 		public virtual ICollection<Timetable> Timetable { get; set; }
+
+		public Room()
+		{
+			Timetable = new List<Timetable>;
+		}
 	}
 }

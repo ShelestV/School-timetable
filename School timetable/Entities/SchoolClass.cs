@@ -13,6 +13,7 @@ namespace School_timetable
 		private int _studyYear;
 		private char _letterClass;
 		private int _numberOfPupils;
+
 		[Key]
 		[Column(Order = 0)]
 		[DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -57,13 +58,6 @@ namespace School_timetable
 
 		public SchoolClass()
 		{
-			Timetable = new List<Timetable>();
-		}
-
-		public SchoolClass(int studyYear, char letterClass)
-		{
-			_studyYear = studyYear;
-			_letterClass = letterClass;
 			Timetable = new List<Timetable>();
 		}
 	}

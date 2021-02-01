@@ -40,14 +40,5 @@ namespace School_timetable
 		{
 			Timetable = new List<Timetable>();
 		}
-
-		public Lesson(int id, Time begin, Time end)
-		{
-			_lessonID = id;
-			_timeBegin = begin;
-			_timeEnd = end;
-
-			Timetable = new List<Timetable>();
-		}
 	}
 }

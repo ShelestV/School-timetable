@@ -47,29 +47,6 @@ namespace School_timetable
 
 		public SchoolClassLoading()
 		{
-			_classLoading = 0;
-
-			Classes = new List<SchoolClass>();
-			Subjects = new List<StudyPlan>();
-		}
-
-		public SchoolClassLoading(int studyYear)
-		{
-			_studyYear = studyYear;
-			_classLoading = 0;
-
-			Classes = new List<SchoolClass>();
-			Subjects = new List<StudyPlan>();
-		}
-
-		public SchoolClassLoading(int studyYear, int classLoading)
-		{
-			_studyYear = studyYear;
-			if (classLoading >= 0)
-				_classLoading = classLoading;
-			else
-				_classLoading = 0;
-
 			Classes = new List<SchoolClass>();
 			Subjects = new List<StudyPlan>();
 		}

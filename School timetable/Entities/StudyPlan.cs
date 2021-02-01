@@ -46,15 +46,5 @@ namespace School_timetable
 
 		public virtual SchoolSubject Subject { get; set; }
 		public virtual SchoolClassLoading StudyYear { get; set; }
-
-		public StudyPlan()
-		{
-			_numberOfHours = 0;
-		}
-
-		public StudyPlan(int numberOfHours)
-		{
-			_numberOfHours = numberOfHours;
-		}
 	}
 }

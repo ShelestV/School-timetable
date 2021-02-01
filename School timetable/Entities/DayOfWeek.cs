@@ -33,11 +33,5 @@ namespace School_timetable
 		{
 			Timetable = new List<Timetable>();
 		}
-
-		public DayOfWeek(Days day)
-		{
-			_day = day;
-			Timetable = new List<Timetable>();
-		}
 	}
 }
