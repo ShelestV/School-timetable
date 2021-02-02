@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace School_timetable
+namespace School_timetable.Entities
 {
 	class SchoolClass
 	{
