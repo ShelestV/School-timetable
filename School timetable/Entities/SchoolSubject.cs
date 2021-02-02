@@ -18,6 +18,8 @@ namespace School_timetable.Entities
 			get => _subjectID;
 			set => _subjectID = value;
 		}
+
+		[MaxLength(50)]
 		public string Name
 		{
 			get => _name;

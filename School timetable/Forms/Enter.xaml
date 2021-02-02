@@ -1,11 +1,11 @@
-﻿<Window x:Class="School_timetable.MainWindow"
+﻿<Window x:Class="School_timetable.Forms.Enter"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:School_timetable"
+        xmlns:local="clr-namespace:School_timetable.Forms"
         mc:Ignorable="d"
-        Title="MainWindow" Height="327.835" Width="583.505" Background="#222831" BorderThickness="0">
+        Title="Window1" Height="330" Width="580" Background="#222831" BorderThickness="0">
     <Grid>
         <Canvas>
             <Label Name="LoginLabel" 
@@ -60,7 +60,8 @@
                     Foreground="#ffd369"
                     BorderBrush="#ffd369"
                     Canvas.Top="200" 
-                    Canvas.Left="260">
+                    Canvas.Left="260"
+                    Click="button_Click">
                 Enter
             </Button>
         </Canvas>

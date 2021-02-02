@@ -12,7 +12,7 @@ namespace School_timetable.Entities
 	{
 		private int _numberOfHours;
 		private int _subjectID;
-		private int _classStudyYearID;
+		private int _studyYear;
 
 		public int NumberOfHours
 		{
@@ -38,13 +38,14 @@ namespace School_timetable.Entities
 		[Key]
 		[Column(Order = 1)]
 		[DatabaseGenerated(DatabaseGeneratedOption.None)]
-		public int ClassStudyYearID
+		public int StudyYear
 		{
-			get => _classStudyYearID;
-			set => _classStudyYearID = value;
+			get => _studyYear;
+			set => _studyYear = value;
 		}
 
 		public virtual SchoolSubject Subject { get; set; }
-		public virtual SchoolClassLoading StudyYear { get; set; }
+		[ForeignKey("StudyYear")]
+		public virtual SchoolClassLoading Class { get; set; }
 	}
 }
