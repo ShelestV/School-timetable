@@ -9,7 +9,7 @@ namespace School_timetable.Entities
 {
 	class TimetableContext : DbContext
 	{
-		protected TimetableContext() : base("SchoolTimetable") { }
+		public TimetableContext() : base("SchoolTimetable") { }
 
 		public DbSet<Teacher> Teachers { get; set; }
 		public DbSet<SchoolSubject> Subjects { get; set; }
@@ -24,60 +24,48 @@ namespace School_timetable.Entities
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Room>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Room)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<DayOfWeek>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Day)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<Lesson>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Lesson)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<Teacher>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Teacher)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<SchoolClass>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Class)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<SchoolSubject>()
-				.HasMany(e => e.Timetable)
-				.WithRequired()
-				.WillCascadeOnDelete(true);
-
-
-			modelBuilder.Entity<Teacher>()
-				.HasMany(e => e.Subjects)
-				.WithRequired()
+				.HasMany(c => c.Timetable)
+				.WithRequired(p => p.Subject)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<SchoolSubject>()
-				.HasMany(e => e.Teachers)
-				.WithRequired()
-				.WillCascadeOnDelete(true);
-
-
-			modelBuilder.Entity<SchoolSubject>()
-				.HasMany(e => e.ClassYears)
-				.WithRequired()
+				.HasMany(c => c.ClassYears)
+				.WithRequired(p => p.Subject)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<SchoolClassLoading>()
-				.HasMany(e => e.Subjects)
-				.WithRequired()
+				.HasMany(c => c.Subjects)
+				.WithRequired(p => p.Class)
 				.WillCascadeOnDelete(true);
 
 			modelBuilder.Entity<SchoolClassLoading>()
-				.HasMany(e => e.Classes)
-				.WithRequired()
+				.HasMany(c => c.Classes)
+				.WithRequired(p => p.Year)
 				.WillCascadeOnDelete(true);
 		}
 	}

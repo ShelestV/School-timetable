@@ -22,7 +22,7 @@ namespace School_timetable.Entities
 		private int _lessonID;
 		private int _teacherID;
 		private int _studyYear;
-		private char _letterClass;
+		private string _letterClass;
 		private int _subjectID;
 
 		[Key]
@@ -77,17 +77,23 @@ namespace School_timetable.Entities
 			set => _studyYear = value;
 		}
 
-		public char LetterClass
+		public string LetterClass
 		{
 			get => _letterClass;
 			set => _letterClass = value;
 		}
 
+		[ForeignKey("DayOfWeek")]
 		public virtual DayOfWeek Day { get; set; }
+		[ForeignKey("RoomID")]
 		public virtual Room Room { get; set; }
+		[ForeignKey("LessonID")]
 		public virtual Lesson Lesson { get; set; }
+		[ForeignKey("TeacherID")]
 		public virtual Teacher Teacher { get; set; }
+		[ForeignKey("SubjectID")]
 		public virtual SchoolSubject Subject { get; set; }
+		[ForeignKey("StudyYear,LetterClass")]
 		public virtual SchoolClass Class { get; set; }
 	}
 }

@@ -11,7 +11,7 @@ namespace School_timetable.Entities
 	class SchoolClass
 	{
 		private int _studyYear;
-		private char _letterClass;
+		private string _letterClass;
 		private int _numberOfPupils;
 
 		[Key]
@@ -33,7 +33,8 @@ namespace School_timetable.Entities
 
 		[Key]
 		[Column(Order = 1)]
-		public char LetterClass
+		[MaxLength(1)]
+		public string LetterClass
 		{
 			get
 			{
@@ -41,8 +42,8 @@ namespace School_timetable.Entities
 			}
 			set
 			{
-				if ('А' <= value && value <= 'Я' ||
-					'а' <= value && value <= 'я')
+				if ('А' <= value[0] && value[0] <= 'Я' ||
+					'а' <= value[0] && value[0] <= 'я')
 					_letterClass = value;
 			}
 		}
@@ -53,7 +54,8 @@ namespace School_timetable.Entities
 			set => _numberOfPupils = value;
 		}
 
-		public virtual SchoolClassLoading Class { get; set; }
+		[ForeignKey("StudyYear")]
+		public virtual SchoolClassLoading Year { get; set; }
 		public virtual ICollection<Timetable> Timetable { get; set; }
 
 		public SchoolClass()

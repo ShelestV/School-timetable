@@ -19,6 +19,7 @@ namespace School_timetable.Entities
 			set => _teacherID = value;
 		}
 
+		[MaxLength(50)]
 		public string FIO 
 		{
 			get => _fio;
