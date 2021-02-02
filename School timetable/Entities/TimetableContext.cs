@@ -9,10 +9,7 @@ namespace School_timetable
 {
 	class TimetableContext : DbContext
 	{
-		protected TimetableContext() : base("SchoolTimetable")
-		{ 
-
-		}
+		protected TimetableContext() : base("SchoolTimetable") { }
 
 		public DbSet<Teacher> Teachers { get; set; }
 		public DbSet<SchoolSubject> Subjects { get; set; }
@@ -22,6 +19,7 @@ namespace School_timetable
 		public DbSet<DayOfWeek> Days { get; set; }
 		public DbSet<Room> Rooms { get; set; }
 		public DbSet<Lesson> Lessons { get; set; }
+		public DbSet<User> Users { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
