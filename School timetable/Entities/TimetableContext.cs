@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace School_timetable
+namespace School_timetable.Entities
 {
 	class TimetableContext : DbContext
 	{

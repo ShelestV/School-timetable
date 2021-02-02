@@ -65,6 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdditionalComponents\Time.cs" />
     <Compile Include="Entities\DayOfWeek.cs" />
     <Compile Include="Entities\Lesson.cs" />
     <Compile Include="Entities\Room.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Entities\SchoolSubject.cs" />
     <Compile Include="Entities\StudyPlan.cs" />
     <Compile Include="Entities\Teacher.cs" />
-    <Compile Include="Entities\Time.cs" />
     <Compile Include="Entities\Timetable.cs" />
     <Compile Include="Entities\TimetableContext.cs" />
     <Page Include="Forms\Window1.xaml">
