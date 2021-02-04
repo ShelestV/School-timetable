@@ -5,65 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_timetable.Forms"
         mc:Ignorable="d"
-        Title="Window1" Height="330" Width="580" Background="#222831" BorderThickness="0">
+        Title="Timetable" 
+        Height="330" 
+        Width="580" 
+        Background="{StaticResource black}" 
+        BorderThickness="0" 
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Canvas>
-            <Label Name="LoginLabel" 
-                   Content="Login:" 
-                   FontSize="24" 
-                   Foreground="#ffd369" 
-                   Canvas.Top="60" 
-                   Canvas.Left="60">
-            </Label>
-            <Label Name="PasswordLabel" 
-                   Content="Password:" 
-                   FontSize="24" 
-                   Foreground="#ffd369" 
-                   Canvas.Top="120" 
-                   Canvas.Left="60">
-            </Label>
-            <TextBox Name="LoginTextBox" 
+        <DockPanel>
+            <DockPanel Name="TopPanel" DockPanel.Dock="Top" Style="{StaticResource TopPanel}">
+                <Button Style="{StaticResource CloseButton}">
+                    <Image Style="{StaticResource CloseImage}"/>
+                </Button>
+                <Button Style="{StaticResource MinimizeButton}">
+                    <Image Style="{StaticResource MinimizeImage}"/>
+                </Button>
+                <Image Style="{StaticResource LogoImage}"/>
+                <Label Style="{StaticResource NameWindowLabel}"/>
+            </DockPanel>
+            <Canvas>
+                <Label Content="Login:" 
+                       FontSize="24" 
+                       Foreground="{StaticResource yellow}" 
+                       Canvas.Top="60" 
+                       Canvas.Left="60">
+                </Label>
+                <Label Content="Password:" 
+                       FontSize="24" 
+                       Foreground="{StaticResource yellow}" 
+                       Canvas.Top="120" 
+                       Canvas.Left="60">
+                </Label>
+                <TextBox Name="LoginTextBox" 
                      Width="250" 
-                     FontSize="18" 
-                     Background="#393e46" 
-                     Foreground="#ffd369"
-                     BorderBrush="#ffd369" 
+                     FontSize="20" 
+                     Background="{StaticResource darkGray}" 
+                     Foreground="{StaticResource yellow}"
+                     BorderBrush="{StaticResource yellow}" 
                      Canvas.Top="66" 
                      Canvas.Left="200">
-            </TextBox>
-            <PasswordBox Name="PasswordTextBox" 
+                </TextBox>
+                <PasswordBox Name="PasswordTextBox" 
                          Width="250" 
-                         FontSize="18" 
-                         Background="#393e46" 
-                         Foreground="#ffd369"
-                         BorderBrush="#ffd369" 
+                         FontSize="20" 
+                         Background="{StaticResource darkGray}" 
+                         Foreground="{StaticResource yellow}"
+                         BorderBrush="{StaticResource yellow}" 
                          Canvas.Top="126" 
                          Canvas.Left="200">
-            </PasswordBox>
-            <Button Name="Registration"
+                </PasswordBox>
+                <Button Name="RegistrationButton"
                     Width="130"
                     FontSize="20"
                     FontWeight="Thin"
-                    Background="#222831"
-                    Foreground="#ffd369"
-                    BorderBrush="#222831"
+                    Background="{StaticResource black}"
+                    Foreground="{StaticResource yellow}"
+                    BorderBrush="{StaticResource black}"
                     Canvas.Top="160" 
-                    Canvas.Left="260">
-                <TextBlock TextDecorations="Underline">
-                    Registration
-                </TextBlock>
-            </Button>
-                <Button Name="EnterButton"
-                    Width="130"
-                    FontSize="20"
-                    Background="#393e46"
-                    Foreground="#ffd369"
-                    BorderBrush="#ffd369"
-                    Canvas.Top="200" 
                     Canvas.Left="260"
-                    Click="button_Click">
-                Enter
-            </Button>
-        </Canvas>
+                    Click="RegistrationButton_Click">
+                    <TextBlock TextDecorations="Underline">
+                    Registration
+                    </TextBlock>
+                </Button>
+                <Button Name="EnterButton"
+                        Width="130"
+                        FontSize="20"
+                        Background="{StaticResource darkGray}"
+                        Foreground="{StaticResource yellow}"
+                        BorderBrush="{StaticResource yellow}"
+                        Canvas.Top="200" 
+                        Canvas.Left="260"
+                        Click="EnterButton_Click">
+                    Enter
+                </Button>
+            </Canvas>
+        </DockPanel>
     </Grid>
 </Window>

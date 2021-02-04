@@ -22,23 +22,31 @@ namespace School_timetable.Forms
 		public Enter()
 		{
 			InitializeComponent();
+			TopPanel = new DockPanel();
 		}
 
-		private void button_Click(object sender, RoutedEventArgs e)
+		private void EnterButton_Click(object sender, RoutedEventArgs e)
 		{
-			using (var context = new Entities.TimetableContext())
+			using (var database = new Entities.TimetableContext())
 			{
-				foreach (User user in context.Users)
+				foreach (var user in database.Users)
 				{
-					if (user.Login == LoginTextBox.Text &&
-						user.Password == PasswordTextBox.Password)
+					if (user.Login.Equals(LoginTextBox.Text) &&
+						user.Password.Equals(PasswordTextBox.Password))
 					{
 						MessageBox.Show("Successful entering!", "Congratilations");
 						return;
 					}
-					MessageBox.Show("Uncorrect login or password!", "Error");
 				}
+				MessageBox.Show("Uncorrect login or password!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
+		}
+
+		private void RegistrationButton_Click(object sender, RoutedEventArgs e)
+		{
+			var registrationWindow = new Registration();
+			registrationWindow.Show();
+			registrationWindow.Owner = GetWindow(this);
 		}
 	}
 }

@@ -19,6 +19,7 @@ namespace School_timetable
 		private Status _status;
 
 		[Key]
+		[MaxLength(20)]
 		public string Login
 		{
 			get
@@ -32,6 +33,7 @@ namespace School_timetable
 			}
 		}
 
+		[MaxLength(10)]
 		public string Password
 		{
 			get
