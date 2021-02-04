@@ -4,6 +4,79 @@
              xmlns:local="clr-namespace:School_timetable"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <!--Colors-->
+            <SolidColorBrush x:Key="black" Color="#222831"/>
+            <SolidColorBrush x:Key="darkGray" Color="#393e46"/>
+            <SolidColorBrush x:Key="yellow" Color="#ffd369"/>
+            <SolidColorBrush x:Key="white" Color="#eeeeee"/>
+            
+            <!--Style of panel-->
+            <Style x:Key="TopPanel" TargetType="DockPanel">
+                <Setter Property="DockPanel.Dock" Value="Top"/>
+                <Setter Property="Height"  Value="30"/>
+                <Setter Property="Background" Value="{StaticResource black}"/>
+            </Style>
+            
+            <!--Buttons-->
+
+            <Style x:Key="CloseButton" TargetType="Button">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{StaticResource black}"/>
+                <Setter Property="DockPanel.Dock" Value="Right"/>
+                <EventSetter Event="Click" Handler="CloseButton_Click"/>
+            </Style>
+
+            <Style x:Key="MinimizeButton" TargetType="Button">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{StaticResource black}"/>
+                <Setter Property="DockPanel.Dock" Value="Right"/>
+                <EventSetter Event="Click" Handler="MinimizeButton_Click"/>
+            </Style>
+
+            <Style x:Key="BackButton" TargetType="Button">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{StaticResource black}"/>
+                <Setter Property="DockPanel.Dock" Value="Right"/>
+                <EventSetter Event="Click" Handler="BackButton_Click"/>
+            </Style>
+            
+            <!--Logotype of application-->
+            <Style x:Key="LogoImage" TargetType="Image">
+                <Setter Property="Source" Value="Images/logo.png"/>
+                <Setter Property="DockPanel.Dock" Value="Left"/>
+            </Style>
+            
+            <!--Images for buttons-->
+            
+            <Style x:Key="CloseImage" TargetType="Image">
+                <Setter Property="Source" Value="Images/close.png"/>
+            </Style>
+            
+            <Style x:Key="MinimizeImage" TargetType="Image">
+                <Setter Property="Source" Value="Images/minimize.png"/>
+            </Style>
+            
+            <Style x:Key="BackImage" TargetType="Image">
+                <Setter Property="Source" Value="Images/arrow.png"/>
+            </Style>
+            
+            <!--Header (Name of application)-->
+            <Style x:Key="NameWindowLabel" TargetType="Label">
+                <Setter Property="Content" Value="Timetable"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="Foreground" Value="{StaticResource yellow}"/>
+                <Setter Property="Background" Value="{StaticResource black}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="DockPanel.Dock" Value="Left"/>
+            </Style>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
