@@ -15,12 +15,8 @@
     <Grid>
         <DockPanel>
             <DockPanel Name="TopPanel" DockPanel.Dock="Top" Style="{StaticResource TopPanel}">
-                <Button Style="{StaticResource CloseButton}">
-                    <Image Style="{StaticResource CloseImage}"/>
-                </Button>
-                <Button Style="{StaticResource MinimizeButton}">
-                    <Image Style="{StaticResource MinimizeImage}"/>
-                </Button>
+                <Button Style="{StaticResource CloseButton}"/>
+                <Button Style="{StaticResource MinimizeButton}"/>
                 <Image Style="{StaticResource LogoImage}"/>
                 <Label Style="{StaticResource NameWindowLabel}"/>
             </DockPanel>
