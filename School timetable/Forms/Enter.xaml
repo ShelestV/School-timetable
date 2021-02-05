@@ -26,55 +26,44 @@
             </DockPanel>
             <Canvas>
                 <Label Content="Login:" 
-                       FontSize="24" 
-                       Foreground="{StaticResource yellow}" 
+                       Style="{StaticResource SimpleLabel}"
                        Canvas.Top="60" 
                        Canvas.Left="60">
                 </Label>
                 <Label Content="Password:" 
-                       FontSize="24" 
-                       Foreground="{StaticResource yellow}" 
+                       Style="{StaticResource SimpleLabel}"
                        Canvas.Top="120" 
                        Canvas.Left="60">
                 </Label>
                 <TextBox Name="LoginTextBox" 
-                     Width="250" 
-                     FontSize="20" 
-                     Background="{StaticResource darkGray}" 
-                     Foreground="{StaticResource yellow}"
-                     BorderBrush="{StaticResource yellow}" 
-                     Canvas.Top="66" 
-                     Canvas.Left="200">
+                         Style="{StaticResource SimpleTextBox}"
+                         Width="250" 
+                         Canvas.Top="66" 
+                         Canvas.Left="200">
                 </TextBox>
                 <PasswordBox Name="PasswordTextBox" 
-                         Width="250" 
-                         FontSize="20" 
-                         Background="{StaticResource darkGray}" 
-                         Foreground="{StaticResource yellow}"
-                         BorderBrush="{StaticResource yellow}" 
-                         Canvas.Top="126" 
-                         Canvas.Left="200">
+                             Style="{StaticResource SimplePasswordBox}"
+                             Width="250" 
+                             Canvas.Top="126" 
+                             Canvas.Left="200">
                 </PasswordBox>
                 <Button Name="RegistrationButton"
-                    Width="130"
-                    FontSize="20"
-                    FontWeight="Thin"
-                    Background="{StaticResource black}"
-                    Foreground="{StaticResource yellow}"
-                    BorderBrush="{StaticResource black}"
-                    Canvas.Top="160" 
-                    Canvas.Left="260"
-                    Click="RegistrationButton_Click">
+                        FontSize="20"
+                        FontWeight="Thin"
+                        Background="{StaticResource black}"
+                        Foreground="{StaticResource yellow}"
+                        BorderBrush="{StaticResource black}"
+                        Width="130"
+                        Canvas.Top="160" 
+                        Canvas.Left="260"
+                        Click="RegistrationButton_Click">
                     <TextBlock TextDecorations="Underline">
                     Registration
                     </TextBlock>
                 </Button>
                 <Button Name="EnterButton"
-                        Width="130"
-                        FontSize="20"
-                        Background="{StaticResource darkGray}"
-                        Foreground="{StaticResource yellow}"
-                        BorderBrush="{StaticResource yellow}"
+                        Style="{StaticResource SimpleButton}"
+                        Width="130" 
                         Canvas.Top="200" 
                         Canvas.Left="260"
                         Click="EnterButton_Click">

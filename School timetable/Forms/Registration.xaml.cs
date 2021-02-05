@@ -1,19 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Core;
-using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.Infrastructure;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace School_timetable.Forms
 {
@@ -44,6 +30,7 @@ namespace School_timetable.Forms
 						Password = PasswordTextBox.Password,
 						UserStatus = Status.USER
 					};
+
 					try
 					{
 						database.Users.Add(user);
@@ -59,7 +46,6 @@ namespace School_timetable.Forms
 					{
 						database.Users.Remove(user);
 					}
-
 				}
 			}
 			// If user enter incorrect data

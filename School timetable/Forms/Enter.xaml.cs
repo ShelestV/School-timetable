@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace School_timetable.Forms
 {
@@ -34,8 +23,18 @@ namespace School_timetable.Forms
 					if (user.Login.Equals(LoginTextBox.Text) &&
 						user.Password.Equals(PasswordTextBox.Password))
 					{
-						MessageBox.Show("Successful entering!", "Congratilations");
-						return;
+						if (user.UserStatus == Status.USER)
+						{
+							return;
+						}
+						else
+						{
+							var menu = new AdminMenu();
+							menu.Owner = this;
+							menu.Show();
+							this.Hide();
+							return;
+						}
 					}
 				}
 				MessageBox.Show("Uncorrect login or password!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);

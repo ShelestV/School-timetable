@@ -46,7 +46,7 @@
                 <Setter Property="DockPanel.Dock" Value="Right"/>
                 <EventSetter Event="Click" Handler="BackButton_Click"/>
             </Style>
-            
+
             <!--Logotype of application-->
             <Style x:Key="LogoImage" TargetType="Image">
                 <Setter Property="Source" Value="Images/logo.png"/>
@@ -75,6 +75,38 @@
                 <Setter Property="Background" Value="{StaticResource black}"/>
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="DockPanel.Dock" Value="Left"/>
+            </Style>
+            
+            <!--Control elements-->
+
+            <!--Simple Button-->
+            <Style x:Key="SimpleButton" TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Background" Value="{StaticResource darkGray}"/>
+                <Setter Property="Foreground" Value="{StaticResource yellow}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource yellow}"/>
+            </Style>
+
+            <!--Simple TextBox-->
+            <Style x:Key="SimpleTextBox" TargetType="TextBox">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Background" Value="{StaticResource darkGray}"/>
+                <Setter Property="Foreground" Value="{StaticResource yellow}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource yellow}"/>
+            </Style>
+            
+            <!--PasswordBox-->
+            <Style x:Key="SimplePasswordBox" TargetType="PasswordBox">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Background" Value="{StaticResource darkGray}"/>
+                <Setter Property="Foreground" Value="{StaticResource yellow}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource yellow}"/>
+            </Style>
+
+            <!--Simple label-->
+            <Style x:Key="SimpleLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="Foreground" Value="{StaticResource yellow}"/>
             </Style>
         </ResourceDictionary>
         
