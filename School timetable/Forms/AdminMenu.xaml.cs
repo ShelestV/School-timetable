@@ -26,7 +26,9 @@ namespace School_timetable.Forms
 
 		private void AddInformationButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			var newWindow = new AddInfoAboutSchool();
+			newWindow.Show();
+			this.Hide();
 		}
 
 		private void EditStudyPlanButton_Click(object sender, RoutedEventArgs e)
