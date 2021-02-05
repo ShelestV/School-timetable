@@ -76,6 +76,14 @@
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Entities\Timetable.cs" />
     <Compile Include="Entities\TimetableContext.cs" />
+    <Page Include="Forms\AddInfoAboutSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Enter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +101,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Forms\AddInfoAboutSchool.xaml.cs">
+      <DependentUpon>AddInfoAboutSchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMenu.xaml.cs">
+      <DependentUpon>AdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Enter.xaml.cs">
       <DependentUpon>Enter.xaml</DependentUpon>
     </Compile>
