@@ -84,6 +84,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="db\Connectiondb.cs" />
+    <Compile Include="db\Subject.cs" />
     <Compile Include="db\Teacher.cs" />
     <Compile Include="db\User.cs" />
     <Compile Include="Forms\AddInfoAboutSchool.xaml.cs">

@@ -12,9 +12,12 @@ namespace School_timetable
 
 		public string FIO { get => _fio; }
 
+		public List<Subject> Subjects;
+
 		public Teacher(string fio)
 		{
 			_fio = fio;
+			Subjects = new List<Subject>();
 		}
 	}
 }

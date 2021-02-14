@@ -37,29 +37,9 @@ namespace School_timetable.Forms
 					}
 				}
 			}
-			//using (var database = new Entities.TimetableContext())
-			//{
-			//	foreach (var user in database.Users)
-			//	{
-			//		if (user.Login.Equals(LoginTextBox.Text) &&
-			//			user.Password.Equals(PasswordTextBox.Password))
-			//		{
-			//			if (user.UserStatus == Status.USER)
-			//			{
-			//				return;
-			//			}
-			//			else
-			//			{
-			//				var menu = new AdminMenu();
-			//				menu.Owner = this;
-			//				menu.Show();
-			//				this.Hide();
-			//				return;
-			//			}
-			//		}
-			//	}
-			//	MessageBox.Show("Uncorrect login or password!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-			//}
+
+			// if user is not existed in system
+			MessageBox.Show("Uncorrect login or password!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 		}
 
 		private void RegistrationButton_Click(object sender, RoutedEventArgs e)
