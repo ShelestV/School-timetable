@@ -12,13 +12,12 @@ namespace School_timetable.Forms
 		{
 			InitializeComponent();
 			TopPanel = new DockPanel();
+			Contextdb.GetInformationFromDatabase();
 		}
 
 		private void EnterButton_Click(object sender, RoutedEventArgs e)
 		{
-			Connectiondb.FirstConnection();
-
-			foreach (var user in Connectiondb.Users)
+			foreach (var user in Contextdb.Users)
 			{
 				if (user.Login.Equals(LoginTextBox.Text) &&
 					user.Password.Equals(PasswordTextBox.Password))

@@ -21,31 +21,19 @@ namespace School_timetable.Forms
 				passwordInTheRange &&
 				PasswordTextBox.Password.Equals(RepeatPasswordTextBox.Password))
 			{
-				//using (var database = new Entities.TimetableContext())
-				//{
-				//	var user = new User
-				//	{
-				//		Login = LoginTextBox.Text,
-				//		Password = PasswordTextBox.Password,
-				//		UserStatus = Status.USER
-				//	};
+				// Check if this user is existed in system
+				foreach (var systemUser in Contextdb.Users)
+				{
+					if (systemUser.Login.Equals(LoginTextBox.Text))
+					{
+						MessageBox.Show("This user is registrated!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+						return;
+					}
+				}
 
-				//	try
-				//	{
-				//		database.Users.Add(user);
-				//		database.SaveChanges();
-				//		MessageBox.Show("Registration completed successfuly", "Congratilations", MessageBoxButton.OK);
-				//	}
-				//	catch (DbUpdateException)
-				//	{
-				//		MessageBox.Show("This user is registrated!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-				//		//throw new Exception("Problem with PK!", ex);
-				//	}
-				//	finally
-				//	{
-				//		database.Users.Remove(user);
-				//	}
-				//}
+				var user = new User(LoginTextBox.Text, PasswordTextBox.Password, UserStatus.User);
+				Contextdb.Users.Add(user);
+				Contextdb.AddUserToDatabase(user);
 			}
 			// If user enter incorrect data
 			else
