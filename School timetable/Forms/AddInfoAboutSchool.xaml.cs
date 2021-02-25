@@ -31,5 +31,10 @@ namespace School_timetable.Forms
 			_oldWindow.Show();
 			this.Close();
 		}
+
+		private void DeleteAllSpecializationsButton_Click(object sender, RoutedEventArgs e)
+		{ 
+		
+		}
 	}
 }

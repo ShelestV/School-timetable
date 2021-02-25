@@ -54,7 +54,42 @@
                         </Style>
                     </TabControl.Resources>
                     <TabItem Header="Teacher" FontSize="16">
-                        
+                        <Grid Width="365" 
+                              Height="410">
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="20,0,60,370"
+                                   Content="Full name"/>
+                            <TextBox Name="FullNameTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,40,60,340"/>
+                            
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="20,70,60,300"
+                                   Content="Subject"/>
+                            <TextBox Name="SubjectTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,110,60,270"/>
+
+                            <Button Name="AddSpecializationButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="40,155,205,225"
+                                    Content="Add"/>
+                            <Button Name="DeleteSpecializationButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="170,155,75,225"
+                                    Content="Delete"/>
+
+                            <TextBox Name="SpecializationsTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,200,60,25"
+                                     IsReadOnly="True"
+                                     VerticalScrollBarVisibility="Auto"/>
+
+                            <Button Name="DeletAllSpecializationsButton"
+                                    Style="{StaticResource BasketButton}"
+                                    Margin="305,334,10,26"
+                                    Click="DeleteAllSpecializationsButton_Click"/>
+                        </Grid>
                     </TabItem>
                     <TabItem Header="Class" FontSize="16">
                         
