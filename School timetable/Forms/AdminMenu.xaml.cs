@@ -19,14 +19,16 @@ namespace School_timetable.Forms
 	/// </summary>
 	public partial class AdminMenu : Window
 	{
-		public AdminMenu()
+		private Window _oldWindow;
+		public AdminMenu(Window old)
 		{
 			InitializeComponent();
+			_oldWindow = old;
 		}
 
 		private void AddInformationButton_Click(object sender, RoutedEventArgs e)
 		{
-			var newWindow = new AddInfoAboutSchool();
+			var newWindow = new AddInfoAboutSchool(this);
 			newWindow.Show();
 			this.Hide();
 		}
@@ -39,6 +41,12 @@ namespace School_timetable.Forms
 		private void EditTimetableButton_Click(object sender, RoutedEventArgs e)
 		{
 
+		}
+
+		private void BackButton_Click(object sender, RoutedEventArgs e)
+		{
+			_oldWindow.Show();
+			this.Close();
 		}
 	}
 }

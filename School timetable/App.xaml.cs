@@ -22,16 +22,8 @@ namespace School_timetable
 
 		private void MinimizeButton_Click(object sender, RoutedEventArgs e)
 		{
-			//Window w = Window.GetWindow((Button)sender);
-			//w.WindowState = WindowState.Minimized;
-		}
-
-		private void BackButton_Click(object sender, RoutedEventArgs e)
-		{
-			// Return to old window
 			Window w = Window.GetWindow((Button)sender);
-			w.Owner.Show();
-			w.Hide();
+			w.WindowState = WindowState.Minimized;
 		}
 	}
 }

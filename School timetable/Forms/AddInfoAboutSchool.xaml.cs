@@ -19,9 +19,17 @@ namespace School_timetable.Forms
 	/// </summary>
 	public partial class AddInfoAboutSchool : Window
 	{
-		public AddInfoAboutSchool()
+		private Window _oldWindow;
+		public AddInfoAboutSchool(Window old)
 		{
 			InitializeComponent();
+			_oldWindow = old;
+		}
+
+		private void BackButton_Click(object sender, RoutedEventArgs e)
+		{
+			_oldWindow.Show();
+			this.Close();
 		}
 	}
 }

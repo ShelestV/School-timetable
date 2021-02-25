@@ -17,7 +17,8 @@
             <DockPanel Name="TopPanel" DockPanel.Dock="Top" Style="{StaticResource TopPanel}">
                 <Button Style="{StaticResource CloseButton}"/>
                 <Button Style="{StaticResource MinimizeButton}"/>
-                <Button Style="{StaticResource BackButton}"/>
+                <Button Style="{StaticResource BackButton}"
+                        Click="BackButton_Click"/>
                 <Image Style="{StaticResource LogoImage}"/>
                 <Label Style="{StaticResource NameWindowLabel}"/>
             </DockPanel>

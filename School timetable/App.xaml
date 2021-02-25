@@ -65,7 +65,7 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-                <EventSetter Event="Click" Handler="BackButton_Click"/>
+               
             </Style>
 
             <!--Logotype of application-->

@@ -7,9 +7,12 @@ namespace School_timetable.Forms
 	/// </summary>
 	public partial class Registration : Window
 	{
-		public Registration()
+		private Window oldWindow;
+
+		public Registration(Window old)
 		{
 			InitializeComponent();
+			oldWindow = old;
 		}
 
 		private void RegistrateButton_Click(object sender, RoutedEventArgs e)
@@ -45,6 +48,12 @@ namespace School_timetable.Forms
 						" - 'Password' and 'Repeat password' must be equal", 
 						"Error", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
+		}
+
+		private void BackButton_Click(object sender, RoutedEventArgs e)
+		{
+			oldWindow.Show();
+			this.Close();
 		}
 	}
 }

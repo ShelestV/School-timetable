@@ -24,16 +24,17 @@ namespace School_timetable.Forms
 				{
 					if (user.Status.Equals(UserStatus.User))
 					{
-						return;
 					}
 					else
 					{
-						var menu = new AdminMenu();
+						var menu = new AdminMenu(this);
 						menu.Owner = this;
 						menu.Show();
 						this.Hide();
-						return;
 					}
+					LoginTextBox.Text = "";
+					PasswordTextBox.Password = "";
+					return;
 				}
 			}
 
@@ -43,7 +44,7 @@ namespace School_timetable.Forms
 
 		private void RegistrationButton_Click(object sender, RoutedEventArgs e)
 		{
-			var registrationWindow = new Registration();
+			var registrationWindow = new Registration(this);
 			registrationWindow.Show();
 			registrationWindow.Owner = GetWindow(this);
 		}
