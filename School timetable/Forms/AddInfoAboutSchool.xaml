@@ -73,11 +73,13 @@
                             <Button Name="AddSpecializationButton"
                                     Style="{StaticResource SimpleButton}"
                                     Margin="40,155,205,225"
-                                    Content="Add"/>
+                                    Content="Add"
+                                    Click="AddSpecializationButton_Click"/>
                             <Button Name="DeleteSpecializationButton"
                                     Style="{StaticResource SimpleButton}"
                                     Margin="170,155,75,225"
-                                    Content="Delete"/>
+                                    Content="Delete"
+                                    Click="DeleteSpecializationButton_Click"/>
 
                             <TextBox Name="SpecializationsTextBox"
                                      Style="{StaticResource SimpleTextBox}"
@@ -92,13 +94,156 @@
                         </Grid>
                     </TabItem>
                     <TabItem Header="Class" FontSize="16">
-                        
+                        <Grid Width="365" 
+                              Height="410">
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="20,0,60,370"
+                                   Content="Class"/>
+                            <TextBox Name="ClassTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,40,60,340"/>
+
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="20,70,60,300"
+                                   Content="Number of pupils"/>
+                            <TextBox Name="NumberOfPupilsTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,110,60,270"/>
+
+                            <Button Name="AddClassButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="40,155,205,225"
+                                    Content="Add"
+                                    Click="AddClassButton_Click"/>
+                            <Button Name="DeleteClassButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="170,155,75,225"
+                                    Content="Delete"
+                                    Click="DeleteClassButton_Click"/>
+
+                            <TextBox Name="ClassesTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,200,60,25"
+                                     IsReadOnly="True"
+                                     VerticalScrollBarVisibility="Auto"/>
+
+                            <Button Name="DeletAllClassesButton"
+                                    Style="{StaticResource BasketButton}"
+                                    Margin="305,334,10,26"
+                                    Click="DeletAllClassesButton_Click"/>
+                        </Grid>
                     </TabItem>
                     <TabItem Header="Room" FontSize="16">
-                        
+                        <Grid Width="365" 
+                              Height="410">
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="20,0,60,370"
+                                   Content="Room"/>
+                            <TextBox Name="RoomTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,40,60,340"/>
+
+                            <Button Name="AddRoomButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="40,155,205,225"
+                                    Content="Add"
+                                    Click="AddRoomButton_Click"/>
+                            <Button Name="DeleteRoomButton"
+                                    Style="{StaticResource SimpleButton}"
+                                    Margin="170,155,75,225"
+                                    Content="Delete"
+                                    Click="DeleteRoomButton_Click"/>
+
+                            <TextBox Name="RoomsTextBox"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="25,200,60,25"
+                                     IsReadOnly="True"
+                                     VerticalScrollBarVisibility="Auto"/>
+
+                            <Button Name="DeletAllRoomsButton"
+                                    Style="{StaticResource BasketButton}"
+                                    Margin="305,334,10,26"
+                                    Click="DeletAllRoomsButton_Click"/>
+                        </Grid>
                     </TabItem>
                     <TabItem Header="Lesson" FontSize="16">
-                        
+                        <Grid Width="365" 
+                              Height="410">
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,40,335,330"
+                                   Content="1"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,80,335,290"
+                                   Content="2"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,120,335,250"
+                                   Content="3"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,160,335,210"
+                                   Content="4"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,200,335,170"
+                                   Content="5"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,240,335,130"
+                                   Content="6"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,280,335,90"
+                                   Content="7"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,320,335,50"
+                                   Content="8"/>
+
+                            <TextBox Text="{Binding LessonBegin[0]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,45,250,335"/>
+                            <TextBox Text="{Binding LessonBegin[1]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,85,250,295"/>
+                            <TextBox Text="{Binding LessonBegin[2]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,125,250,255"/>
+                            <TextBox Text="{Binding LessonBegin[3]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,165,250,215"/>
+                            <TextBox Text="{Binding LessonBegin[4]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,205,250,175"/>
+                            <TextBox Text="{Binding LessonBegin[5]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,245,250,135"/>
+                            <TextBox Text="{Binding LessonBegin[6]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,285,250,95"/>
+                            <TextBox Text="{Binding LessonBegin[7]}"
+                                     Style="{StaticResource SimpleTextBox}"
+                                     Margin="30,325,250,55"/>
+
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,40,335,330"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,80,335,290"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,120,335,250"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,160,335,210"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,200,335,170"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,240,335,130"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}" 
+                                   Margin="5,280,335,90"
+                                   Content="-"/>
+                            <Label Style="{StaticResource SimpleLabel}"
+                                   Margin="5,320,335,50"
+                                   Content="-"/>
+                        </Grid>
                     </TabItem>
                 </TabControl>
             </Canvas>
